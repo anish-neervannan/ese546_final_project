@@ -1,4 +1,4 @@
-# **ESE 546 Final Project: The Effect of Genetic Algorithms on Long Short Term Memory Networks with Attention Modules**
+## **ESE 546 Final Project: The Effect of Genetic Algorithms and Attention Modules on Long Short Term Memory Networks for Stock Forecasting**
 
 ### **Authors**
 - Anish Neervannan (anishrn@seas.upenn.edu)
