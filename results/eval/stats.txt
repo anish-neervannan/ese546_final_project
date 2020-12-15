@@ -1,0 +1,2 @@
+Average Batch Loss [1.1791284  0.66203162 1.23756318 1.10322761]
+Average Batch Directional Accuracy [0.43606965 0.46144279 0.42985075 0.4340796 ]

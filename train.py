@@ -38,7 +38,7 @@ print(model)
 
 sector = "Information Technology"
 seq_len = 90
-raw_X = np.load(f"Data/train_and_val_{sector}.npy")
+raw_X = np.load(f"data/train_and_val_{sector}.npy")
 
 for i in range(len(raw_X)):
     scaler = MinMaxScaler(feature_range=(-1, 1))
@@ -163,8 +163,28 @@ if not ga:
     if not os.path.isdir(f"results/{folder_name}"):
         os.mkdir(f"results/{folder_name}")
 
-    plt.plot(np.convolve(train_losses_batch,(1/1000)*np.ones(1000))[1000:-1000])
+    plt.cla()
+
+    name = "Base"
+    if attention:
+        name = "Attention"
+
+    train_losses_batch_new = np.convolve(train_losses_batch,(1/1000)*np.ones(1000))[1000:-1000]
+    plt.plot(train_losses_batch_new)
+    plt.xlabel('Weight Updates')
+    plt.ylabel('Loss')
+    plt.title(f"Training Loss Over Batches for {name} Model (Smoothened)")
     plt.savefig(f"results/{folder_name}/train_losses_batch.png")
+
+    plt.cla()
+    
+    plt.plot(train_loss, label="Training Loss")
+    plt.plot(val_loss, label="Validation Loss")
+    plt.xlabel('Epoch')
+    plt.ylabel('Loss')
+    plt.legend()
+    plt.title(f"Training and Validation Loss Over Epochs for {name} Model")
+    plt.savefig(f"results/{folder_name}/train_val_loss.png")
 
     np.save(f"results/{folder_name}/train_loss.npy", np.asarray(train_loss))
     np.save(f"results/{folder_name}/val_loss.npy", np.asarray(val_loss))
@@ -225,4 +245,4 @@ else:
     np.save(f"results/{folder_name}/min_train_loss.npy", np.asarray(min_tr_losses))
     np.save(f"results/{folder_name}/mean_train_loss.npy", np.asarray(mean_tr_losses))
     np.save(f"results/{folder_name}/val_loss.npy", np.asarray(val_losses))
-    torch.save(tst_models[best_ind].state_dict(), f"results/{folder_name}/best model.pt")
+    torch.save(tst_models[best_ind].state_dict(), f"results/{folder_name}/model.pt")
