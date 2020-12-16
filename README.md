@@ -27,7 +27,7 @@ Additionally, we have the following scripts:
 - **genetic_algorithm.py:** contains the methods needed to randomly initialize models, mutate, and spawn more networks
 - **nn_architectures.py:** contains the modules for the base LSTM and the attention LSTM
 - **process_data.py:** this is a Python version of the .ipynb notebook stored in the notebooks/ directory that was used to generate and save the training/validation and test sets
-- **train.py** the main script that takes in a flag for the model to train (see (Instructions)[https://github.com/anish-neervannan/ese546_final_project#instructions] below). Loads in the required dataset, scales it, initializes a model, trains it for a pre-defined set of hyperparameters including epochs, batches, sequence length, generations, number of models to spawn, etc. After each epoch/generation, it computes validation loss, and at the end of training saves the plots and .npy files containing the losses themselves.
+- **train.py** the main script that takes in a flag for the model to train (see [Instructions](#Instructions) below). Loads in the required dataset, scales it, initializes a model, trains it for a pre-defined set of hyperparameters including epochs, batches, sequence length, generations, number of models to spawn, etc. After each epoch/generation, it computes validation loss, and at the end of training saves the plots and .npy files containing the losses themselves.
 
 
 ### Instructions
