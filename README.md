@@ -17,9 +17,9 @@ In this report, we characterize the performance of long short term memory (LSTM)
 ### Overview of Code
 Our code is organized into directories and scripts. We have the following directories:
 
-- **data:** contains the raw Kaggle data, preprocessed and stored into .npy files separated by sector and training/validation vs test set
+- **data:** contains the raw Kaggle data, preprocessed and stored into .npy files separated by sector and training/validation vs test set. The sector files only include stocks in the S&P 500 and contain two years of stock price open data starting from 2015.
 - **notebooks:** contains the raw draft ipynb notebooks that were used initially to download the data and preprocess it. The data was stored locally after the initial download, and is now uploaded to the data/ folder, so no need to use these anymore
-- **results:** after training and evaluation, the scripts store plots of the training/validation loss, the trained model weights, and the raw npy files used to generate the graphs
+- **results:** after training and evaluation, the scripts store plots of the training/validation loss, the trained model weights, and the raw npy files used to generate the graphs. Each folder in this directory represents an experiment with key parameters in the subdirectory name. The eval folder contains statistics and charts useful for comparing all the models.
 
 Additionally, we have the following scripts:
 
