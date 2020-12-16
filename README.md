@@ -11,7 +11,7 @@
 
 
 ### Abstract
-In this report, we characterize the performance of long short term memory (LSTM) networks for stock forecasting and study how they are affected by attention modules and genetic algorithms. We find that due to the highly stochastic nature of stock prices, LSTM predictions are comparable to random guessing. Attention modules marginally improve this performance. Because genetic algorithms for updating weights ignore the gradient, they require significant training times in order to achieve useful changes in loss; nevertheless, due to the challenging domain of stock prediction, genetic algorithms could be a useful tool in tandem with traditional gradient descent methods.  
+In this report, we characterize the performance of long short term memory (LSTM) networks for stock forecasting and study how they are affected by attention modules and genetic algorithms. We find that due to the highly stochastic nature of daily stock prices, LSTM predictions are comparable to random guessing. In the long run, the LSTM predictions were able to accurately determine the general upward or downward trend of stock prices. Attention modules marginally improve this performance. Since genetic algorithms for updating weights ignore the gradient, they require significant training times in order to achieve useful changes in loss; nevertheless, due to the challenging domain of stock prediction, genetic algorithms could be a useful tool in tandem with traditional gradient descent methods.   
 
 
 ### Overview of Code
